@@ -102,7 +102,7 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 	  startTimeScanFlags();
-
+//deneme
 //	    DIGIT_CONTROL(DIGIT_1,DIGIT_ON);
 //	    DIGIT_CONTROL(DIGIT_2,DIGIT_OFF);
 //	    DIGIT_CONTROL(DIGIT_3,DIGIT_OFF);
@@ -118,8 +118,8 @@ int main(void)
 //	    SEGMENT_CONTROL(SEG_DP,SEGMENT_OFF);
 
 	  //float deneme = low_pass_filter();
-	  sevenSegmentDisplaySetNumbers(low_pass_filter());
-	  //sevenSegmentDisplaySetNumbers(11.10);
+	  //sevenSegmentDisplaySetNumbers(low_pass_filter());
+	  sevenSegmentDisplaySetNumbers(11.10);
 
 //	  sevenSegmentDisplaySetDigit(0, 0, 2);
 //	  sevenSegmentDisplaySetDigit(1, 9, 2);
@@ -150,10 +150,7 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.HSI14State = RCC_HSI14_ON;
   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
   RCC_OscInitStruct.HSI14CalibrationValue = 16;
-  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
-  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
-  RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL6;
-  RCC_OscInitStruct.PLL.PREDIV = RCC_PREDIV_DIV1;
+  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     Error_Handler();
@@ -163,7 +160,7 @@ void SystemClock_Config(void)
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
 
