@@ -31,7 +31,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Core/Inc/adc.h ../Core/Inc/main.h ../Core/Inc/dma.h ../Core/Inc/tim.h \
  ../Core/Inc/gpio.h ../Core/Inc/definitions.h \
  ../Core/Inc/seven_segment_display.h ../Core/Inc/timing.h \
- ../Core/Inc/functions.h
+ ../Core/Inc/definitions.h ../Core/Inc/functions.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:
 ../Core/Inc/stm32f0xx_hal_conf.h:
@@ -70,4 +70,5 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Core/Inc/definitions.h:
 ../Core/Inc/seven_segment_display.h:
 ../Core/Inc/timing.h:
+../Core/Inc/definitions.h:
 ../Core/Inc/functions.h:

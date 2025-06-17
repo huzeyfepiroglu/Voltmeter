@@ -28,7 +28,7 @@ Core/Src/functions.o: ../Core/Src/functions.c ../Core/Inc/functions.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr_ex.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h \
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h \
- ../Core/Inc/definitions.h ../Core/Inc/timing.h
+ ../Core/Inc/definitions.h ../Core/Inc/timing.h ../Core/Inc/definitions.h
 ../Core/Inc/functions.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:
@@ -62,3 +62,4 @@ Core/Src/functions.o: ../Core/Src/functions.c ../Core/Inc/functions.h \
 ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h:
 ../Core/Inc/definitions.h:
 ../Core/Inc/timing.h:
+../Core/Inc/definitions.h:

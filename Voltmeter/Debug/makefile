@@ -52,6 +52,9 @@ default.size.stdout \
 OBJDUMP_LIST += \
 Voltmeter.list \
 
+OBJCOPY_HEX += \
+Voltmeter.hex \
+
 
 # All Target
 all: main-build
@@ -60,8 +63,8 @@ all: main-build
 main-build: Voltmeter.elf secondary-outputs
 
 # Tool invocations
-Voltmeter.elf Voltmeter.map: $(OBJS) $(USER_OBJS) C:\Users\ADMIN\Desktop\Huzeyfe\Voltmeter\STM32F030K6TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Voltmeter.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0 -T"C:\Users\ADMIN\Desktop\Huzeyfe\Voltmeter\STM32F030K6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Voltmeter.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Voltmeter.elf Voltmeter.map: $(OBJS) $(USER_OBJS) C:\Users\ADMIN\git\Voltmeter\Voltmeter\STM32F030K6TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Voltmeter.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0 -T"C:\Users\ADMIN\git\Voltmeter\Voltmeter\STM32F030K6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Voltmeter.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -75,12 +78,17 @@ Voltmeter.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
+Voltmeter.hex: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O ihex $(EXECUTABLES) "Voltmeter.hex"
+	@echo 'Finished building: $@'
+	@echo ' '
+
 # Other Targets
 clean:
-	-$(RM) Voltmeter.elf Voltmeter.list Voltmeter.map default.size.stdout
+	-$(RM) Voltmeter.elf Voltmeter.hex Voltmeter.list Voltmeter.map default.size.stdout
 	-@echo ' '
 
-secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)
+secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_HEX)
 
 fail-specified-linker-script-missing:
 	@echo 'Error: Cannot find the specified linker script. Check the linker settings in the build configuration.'
