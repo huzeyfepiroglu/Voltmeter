@@ -1,0 +1,2 @@
+../Core/Src/functions.c:24:7:checkVoltage	8	static
+../Core/Src/functions.c:46:7:low_pass_filter	32	static

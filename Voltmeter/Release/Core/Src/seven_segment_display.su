@@ -1,0 +1,3 @@
+../Core/Src/seven_segment_display.c:18:6:sevenSegmentDisplaySetDigit	24	static
+../Core/Src/seven_segment_display.c:91:6:sevenSegmentDisplayUpdate	8	static
+../Core/Src/seven_segment_display.c:102:6:sevenSegmentDisplaySetNumbers	16	static
