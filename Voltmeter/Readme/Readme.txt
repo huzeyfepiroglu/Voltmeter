@@ -28,7 +28,9 @@ STLINK KONNEKTÖRÜ
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 DONANIM:
-Transistörler, iç dirençli transistörler ile değiştirildi.
+Transistörler, iç dirençli transistörler ile değiştirildi. DDTD123YC İLE DEĞİŞTİRİLDİ. AMA PARLAKLIKTAN DOLAYI DDTD113ZC İLE DEĞİŞTİRİLECEK
+
+Dirençler kaldırıldı.
 R23 P KANAL TARAFI KALDIRILDI.
 R19 P KANAL TARAFI KALDIRILDI.
 R16 P KANAL TARAFI KALDIRILDI.
@@ -44,10 +46,9 @@ R20 N KANAL TARAFI DİRENÇLER KALDIRILDI.
 R18 N KANAL TARAFI DİRENÇLER KALDIRILDI.
 
 KALDIRILMADAN ÖNCE TÜKETİM 0.035 A (35mA) İDİ FAKAT UYANIRKEN CİDDİ PİK AKIMI GÖRÜLDÜ.
-
 KALDIRILDIKTAN SONRA DA TÜKETİM 0.035 A. DEĞİŞMEDİ. PARLIKLIK ARTMADI.
 
-DDTD123YC İLE DEĞİŞTİRİLDİ. AMA PARLAKLIKTAN DOLAYI DDTD113ZC İLE DEĞİŞTİRİLECEK
+
 
 TRANSİSTÖR SERİSİ DEĞİŞTİRİLECEK.
 
